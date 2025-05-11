@@ -75,7 +75,7 @@
             <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>&nbsp;mande uma mensagem!</strong></h3>
             <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>&nbsp;</strong></h3>
             
-        <form id="contatoForm" action="formulario.php" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name">
+        <form id="contatoForm" action="api/contact" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name">
     <div class="row">
         <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Obrigado pelo contato!</div>
                         <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
@@ -137,6 +137,47 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contatoForm');
+    const successAlert = document.querySelector('[data-form-alert]');
+    const errorAlert = document.querySelector('[data-form-alert-danger]');
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        successAlert.hidden = true;
+        errorAlert.hidden = true;
+
+        const data = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            textarea: form.textarea.value
+        };
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            const text = await res.text();
+            if (text.includes('sucesso')) {
+                successAlert.hidden = false;
+                form.reset();
+            } else {
+                errorAlert.hidden = false;
+            }
+        } catch (err) {
+            console.error(err);
+            errorAlert.hidden = false;
+        }
+    });
+});
+</script>
+
 
 </section>
 
