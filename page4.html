@@ -108,41 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const successAlert = document.querySelector('[data-form-alert]');
     const errorAlert = document.querySelector('[data-form-alert-danger]');
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        successAlert.hidden = true;
-        errorAlert.hidden = true;
-
-        const formData = new FormData(form);
-
-        fetch(form.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(res => res.text())
-        .then(text => {
-            if (text.trim().toLowerCase().includes('sucesso')) {
-                successAlert.hidden = false;
-                errorAlert.hidden = true;
-                form.reset();
-            } else {
-                errorAlert.hidden = false;
-            }
-        })
-        .catch(err => {
-            errorAlert.hidden = false;
-            console.error('Erro no envio:', err);
-        });
-    });
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contatoForm');
-    const successAlert = document.querySelector('[data-form-alert]');
-    const errorAlert = document.querySelector('[data-form-alert-danger]');
-
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
