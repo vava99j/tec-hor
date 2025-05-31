@@ -55,6 +55,16 @@
   overflow: hidden;
    }
 
+   #abb{
+    
+  height: 100%;
+  width: 50%;
+  margin-left: 38%;
+  margin-right: 38%;
+  align-content: center;
+   }
+
+
   </style>
   
 </head>
@@ -103,15 +113,17 @@
     <div>
     <div class="container-fluid">
         <div class="mbr-section-head mb-5">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>&nbsp;Mande uma mensagem!</strong></h3>
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="font-size: 40px;"><strong>&nbsp;Mande uma mensagem!</strong></h3>
             <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>&nbsp;</strong></h3>
             
         <form id="contatoForm" action="api/contact" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name">
     <div class="row">
-        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Obrigado pelo contato!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            Oops...!  ocorreu algum problema!
-                        </div>
+        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12 ab mbr-section-head mb-5 container"  id="abb">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="font-size: 40px;"><strong>Obrigado pelo Contato!</strong></h3>
+        </div>
+        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12 ab mbr-section-head mb-5 container" id="abb">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="font-size: 40px;"><strong>Algo deu errado!</strong></h3>
+        </div>
                     </div>
                 </div>   
     </div>
