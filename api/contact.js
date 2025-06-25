@@ -9,11 +9,11 @@ export default async function handler(req, res) {
     const { name, email, phone, textarea } = req.body;
 
     const conn = await mysql.createConnection({
-      host: 'caboose.proxy.rlwy.net',
-      user: 'root',
-      password: 'cmycwbxOMFMpcibfJvVWEuGkLfZMvtbQ',
-      database: 'railway',
-      port: 13240,
+     host: 'gondola.proxy.rlwy.net',
+  user: 'root',
+  password: 'oWUNYbEfrxRYSepJzfMtxJlslDiQiIrH',
+  database: 'railway',
+  port: 56896
     });
 
     await conn.execute(
