@@ -13,8 +13,7 @@ export default async function handler(req, res) {
   user: 'root',
   password: 'oWUNYbEfrxRYSepJzfMtxJlslDiQiIrH',
   database: 'railway',
-  port: 56896,
-      timezone: '-03:00'
+  port: 56896
     });
 
     await conn.execute(
