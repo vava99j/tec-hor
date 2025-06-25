@@ -14,6 +14,7 @@ export default async function handler(req, res) {
   password: 'oWUNYbEfrxRYSepJzfMtxJlslDiQiIrH',
   database: 'railway',
   port: 56896
+      timezone: '-03:00'
     });
 
     await conn.execute(
