@@ -25,46 +25,70 @@
 
   
    <style> 
-    .container {
-  height: 110%;
-  width: 80%;
-  margin: 0 auto; /* Centraliza horizontalmente */
-
-}
-    .dragArea{
-        
-  height: 110%;
-  width: 80%;
-  margin: 0 auto; /* Centraliza horizontalmente */
-    }
-    .row{
-        
-  height: 110%;
-  width: 80%;
-  margin: 0 auto; /* Centraliza horizontalmente */
+    .container, .dragArea, .row {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
     }
     section {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  overflow: hidden;
-}
-   .teste{
-    
-  margin-bottom: 0;
-  padding-bottom: 0;
-  overflow: hidden;
-   }
-
-   #abb{
-    
-  height: 100%;
-  width: 50%;
-  margin-left: 38%;
-  margin-right: 38%;
-  align-content: center;
-   }
-
-
+      margin-bottom: 0;
+      padding-bottom: 0;
+      overflow: hidden;
+    }
+    .teste {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      overflow: hidden;
+    }
+    #abb {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      align-content: center;
+    }
+    @media (max-width: 991.98px) {
+      .container, .dragArea, .row {
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .mbr-section-title {
+        font-size: 1.5rem !important;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .container, .dragArea, .row {
+        max-width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      .mbr-section-title {
+        font-size: 1.1rem !important;
+      }
+    }
+    /* Estilo para o botão hamburguer */
+    .navbar-toggler {
+      padding: 0.5rem 1rem !important;
+      font-size: 1.5rem !important;
+      border: none;
+      background: transparent;
+    }
+    .hamburger {
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .hamburger span {
+      display: block;
+      height: 4px;
+      background: #17a2b8;
+      border-radius: 2px;
+      width: 100%;
+    }
   </style>
   
 </head>
@@ -83,14 +107,14 @@
 				</span>
 				
 			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</button>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
 						<a class="nav-link link show text-info text-primary display-4" href="index.html" aria-expanded="false">Home<strong></strong></a>
@@ -190,6 +214,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </section>
 
-  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

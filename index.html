@@ -31,11 +31,32 @@
       background-color: white;
     }
     .container {
-  height: 100%;
-  width: 80%;
-  margin: 0 auto; /* Centraliza horizontalmente */
-
-}
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    /* Imagem da estufa responsiva */
+    .img-estufa {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 767px) {
+      .display-1 { font-size: 2.2rem !important; }
+      .display-2 { font-size: 1.5rem !important; }
+      .display-5 { font-size: 1.1rem !important; }
+      .display-7 { font-size: 1rem !important; }
+      .navbar-brand img { height: 2.5rem !important; }
+      .img-estufa { max-width: 100%; }
+      .mbr-figure { width: 100% !important; }
+      .card-wrap { margin-bottom: 1.5rem; }
+      .image-wrapper img { max-width: 100%; height: auto; }
+    }
   </style>
 
 
@@ -56,14 +77,14 @@
 				</span>
 				
 			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</button>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
 						<a class="nav-link link show text-info text-primary display-4" href="index.html" aria-expanded="false">Home<strong></strong></a>
@@ -75,7 +96,7 @@
 						<a class="nav-link link text-info text-primary display-4" href="infos.html">Infos Técnicas<strong></strong></a>
 					</li></ul>
 				
-				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-info display-4" href="contato.html">bunda</a></div>
+				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-info display-4" href="contato.html">Contacte-nos</a></div>
 			</div>
 		</div>
 	</nav>
@@ -101,7 +122,7 @@
         <!--<iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/OWOjRdmpM6I?rel=0&amp;amp;mute=1&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;" 
         width="720" height="470" frameborder="0" allowfullscreen></iframe>//-->
       
-      <img src="assets/images/ftestufa.png" alt="" style="height: 470px; width: 720px; display: flex; justify-content: center; margin-left: 12%; margin-right: 38%;">
+      <img src="assets/images/ftestufa.png" alt="" class="img-estufa">
       
       </div>
     </div>
@@ -200,6 +221,7 @@
   </div>
 </section>
 
-
+<!-- Adicione antes do fechamento da tag </body> para garantir o funcionamento do Bootstrap 5 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
