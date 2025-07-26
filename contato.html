@@ -96,7 +96,7 @@
 </head>
 <body>
   
-  <section data-bs-version="5.1" class="menu menu3 cid-uHEnUaKtSJ" once="menu" id="menu03-p">
+  <section data-bs-version="5.1" class="menu menu3 cid-tHeG7yune1" once="menu" id="menu03-2">
 	
 
 	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
@@ -110,12 +110,12 @@
 				
 			</div>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
@@ -135,87 +135,17 @@
 </section>
 
 <section data-bs-version="5.1" class="form5 cid-uHEnUcprqD" id="form02-t">
-    
-    <div>
-    <div class="container-fluid">
-        <div class="mbr-section-head mb-5">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="font-size: 40px;"><strong>&nbsp;Mande uma mensagem!</strong></h3>
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>&nbsp;</strong></h3>
-            
-        <form id="contatoForm" action="api/contact" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name">
-    <div class="row">
-        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12 ab mbr-section-head mb-5 container"  id="abb">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="font-size: 40px;"><strong>Obrigado pelo Contato!</strong></h3>
+      <br><br><br>
+         <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn teste">
+            <button type="submit" class="btn btn-info display-7"><a class="btn btn-info display-7" href="mailto:svagnerjorge2@gmail.com"> Enviar via Email </a> </button>
         </div>
-        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12 ab mbr-section-head mb-5 container" id="abb">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="font-size: 40px;"><strong>Algo deu errado!</strong></h3>
+
+          <br><br><br>
+         <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn teste">
+            <button type="submit" class="btn btn-info display-7"><a class="btn btn-info display-7" href="https://wa.me/+5511978315772"> Enviar via Whatsapp </a> </button>
         </div>
-                    </div>
-                </div>   
-    </div>
-    <div class="dragArea row">
-        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
-            <input type="text" name="name" placeholder="Nome" data-form-field="name" class="form-control" id="name-form02-t">
-        </div>
-        <div class="col-md col-sm-12 form-group mb-3" data-for="email">
-            <input type="email" name="email" placeholder="E-mail" data-form-field="email" class="form-control" id="email-form02-t">
-        </div>
-        <div class="col-12 form-group mb-3" data-for="phone">
-            <input type="text" name="phone" placeholder="Telefone" data-form-field="phone" class="form-control" id="phone-form02-t">
-        </div>
-        <div class="col-12 form-group mb-3" data-for="textarea">
-            <textarea name="textarea" placeholder="Mensagem" data-form-field="textarea" class="form-control" id="textarea-form02-t"></textarea>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn teste">
-            <button type="submit" class="btn btn-info display-7">Enviar</button>
-        </div>
-    </div>
-</form>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contatoForm');
-    const successAlert = document.querySelector('[data-form-alert]');
-    const errorAlert = document.querySelector('[data-form-alert-danger]');
-
-    form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        successAlert.hidden = true;
-        errorAlert.hidden = true;
-
-        const data = {
-            name: form.name.value,
-            email: form.email.value,
-            phone: form.phone.value,
-            textarea: form.textarea.value
-        };
-
-        try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-
-            const text = await res.text();
-            if (text.includes('sucesso')) {
-                successAlert.hidden = false;
-                form.reset();
-            } else {
-                errorAlert.hidden = false;
-            }
-        } catch (err) {
-            console.error(err);
-            errorAlert.hidden = false;
-        }
-    });
-});
-</script>
-</div>
-
-</section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
+   </body>
 </html>
